@@ -89,3 +89,23 @@ nav button[aria-pressed="true"] { background: var(--accent); color: var(--accent
 button:focus-visible { outline: 4px solid #1a73e8; outline-offset: 3px; }
 
 @media (prefers-reduced-motion: reduce) { .big:active { transform: none; } }
+
+/* ---- 接続コード・入力欄 ---- */
+#pair-info { font-size: 1.1rem; margin: 16px 0 0; }
+#pair-code { font-size: 1.5rem; letter-spacing: 0.12em; }
+#sync-status, #conn-status { font-size: 1rem; margin: 8px 0 0; }
+.connect-row { display: flex; gap: 10px; margin: 0 0 8px; }
+.connect-row input {
+  flex: 1; min-width: 0; min-height: 56px; padding: 0 14px;
+  font: inherit; font-size: 1.4rem; letter-spacing: 0.1em; text-transform: uppercase;
+  background: var(--card); color: var(--ink);
+  border: 3px solid var(--line); border-radius: 14px;
+}
+.connect-row button {
+  min-height: 56px; padding: 0 22px; font: inherit; font-weight: 700; cursor: pointer;
+  background: var(--accent); color: var(--accent-ink);
+  border: 3px solid var(--accent); border-radius: 14px;
+}
+.connect-label { display: block; font-weight: 700; margin: 0 0 6px; }
+#conn-status { margin: 0 0 20px; }
+input:focus-visible { outline: 4px solid #1a73e8; outline-offset: 3px; }

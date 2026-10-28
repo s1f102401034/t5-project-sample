@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>見守りアプリ(仮)</title>
+<title>アプリ(仮)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
@@ -24,11 +24,19 @@
     </button>
     <p id="elder-status" aria-live="polite"></p>
     <button id="undo" class="text-btn" type="button" hidden>記録を取り消す</button>
+    <p id="pair-info">接続コード: <strong id="pair-code"></strong></p>
+    <p id="sync-status" aria-live="polite"></p>
   </section>
 
   <!-- 家族用の画面 -->
   <section id="view-family" aria-labelledby="family-title" hidden>
     <h1 id="family-title">家族用の画面</h1>
+    <label class="connect-label" for="code-input">接続コード</label>
+    <div class="connect-row">
+      <input id="code-input" type="text" maxlength="8" autocomplete="off" autocapitalize="characters">
+      <button id="connect" type="button">接続</button>
+    </div>
+    <p id="conn-status" aria-live="polite"></p>
     <p id="family-status" class="status-card" aria-live="polite"></p>
     <h2>直近7日間の記録</h2>
     <ol id="week" class="week"></ol>
@@ -40,6 +48,6 @@
   <button type="button" data-role-btn="family" aria-pressed="false">家族用</button>
 </nav>
 
-<script src="app.js"></script>
+<script type="module" src="app.js"></script>
 </body>
 </html>
